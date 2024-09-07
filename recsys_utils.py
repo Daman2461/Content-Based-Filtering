@@ -12,15 +12,29 @@ def readCSV(file):
 def findSimilar(movies3):
      
      
-    
+    similar = []
     a = pd.DataFrame((cosine_sim[indices[movies3[0]]]+cosine_sim[indices[movies3[1]]]+cosine_sim[indices[movies3[2]]])/3, columns=["score"])
     
+    a= a.sort_values("score", ascending=False)[0:5]
     
     movie_indices = [indices[movies3[0]], indices[movies3[1]], indices[movies3[2]]]
+
+    x=  pd.DataFrame(cosine_sim[indices[movies3[0]]], columns=["score"])
+    x=x.sort_values("score", ascending=False)[0:5]
+
+    for i in range(1,len(movie_indices)):
+        b=  pd.DataFrame(cosine_sim[indices[movies3[i]]], columns=["score"])
+
+        b= b.sort_values("score", ascending=False)[0:5]
+
+        x=pd.concat([b,x])
+
     
     
-    a = a.drop(movie_indices)
-    similar = a.sort_values("score", ascending=False)[1:11].index
+
+    
+    x = x.drop(movie_indices)
+    similar = x.sort_values("score", ascending=False)[1:11].index
     return (movies['title'].iloc[similar])
    
 
@@ -60,5 +74,4 @@ indices = pd.Series(movies.index, index=movies['title'])
 indices = indices[~indices.index.duplicated(keep='last')]
 
  
-
 
