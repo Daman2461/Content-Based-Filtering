@@ -27,3 +27,5 @@ To run this application locally, follow these steps:
 2. Run app.py using command
    ```bash
    streamlit run app.py
+View Website on your own browser!
+[CLICK HERE!](https://movie-cbf.streamlit.app)
