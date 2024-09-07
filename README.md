@@ -22,7 +22,7 @@ To run this application locally, follow these steps:
 
 1. **Clone the Repository:**
    ```bash
-   git clone https://github.com/yourusername/movie-recommender-system.git
+   git clone https://github.com/Daman2461/Content-Based-Filtering.git
 
 2. Run app.py using command
    ```bash
