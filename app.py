@@ -1,6 +1,4 @@
 import numpy as np
-import tensorflow as tf
-
 from recsys_utils import *
 import pandas as pd
 import streamlit as st
