@@ -1,5 +1,4 @@
 import pandas as pd
-import matplotlib.pyplot as plt
 from sklearn.metrics.pairwise import cosine_similarity
 from sklearn.feature_extraction.text import TfidfVectorizer
 import streamlit as st
