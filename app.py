@@ -47,6 +47,6 @@ if submitted:
     
     
 
-for i,col in zip(m_id[5:],columns):
+    for i,col in zip(m_id[5:],columns):
         
         col.image(poster(i),caption = List[List['id'] == i][ 'title'].values,width=200)
