@@ -3,3 +3,6 @@ pandas==1.4.4
 streamlit==1.32.0
 sklearn-pandas==2.2.0
 distutils
+scikit-learn==1.2.2
+ 
+requests==2.28.2
